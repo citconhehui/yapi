@@ -9,9 +9,7 @@ WORKDIR /yapi/vendors
 
 COPY . /yapi/vendors
 
-RUN npm install --production --registry https://registry.npm.taobao.org
-
-RUN node server/app.js
+RUN npm install --production --registry https://registry.npm.taobao.org --force
 
 ######## 镜像 ########
 FROM node:12.16.3-alpine3.11

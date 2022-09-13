@@ -7,6 +7,8 @@
     "servername": "host.docker.internal",
     "DATABASE": "yapi",
     "port": 27017,
+    "user": "",
+    "pass": "",
     "authSource": ""
   },
   "mail": {
