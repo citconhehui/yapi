@@ -49,8 +49,11 @@ function connect(callback) {
     connectString = config.db.connectString;
   }else{
     connectString = `mongodb://${config.db.servername}:${config.db.port}/${config.db.DATABASE}`;
-    if (config.db.authSource) {
-      connectString = connectString + `?authSource=${config.db.authSource}`;
+    // if (config.db.authSource) {
+    //   connectString = connectString + `?authSource=${config.db.authSource}`;
+    // }
+    if (config.db.cert) {
+      connectString += '?ssl=true';
     }
   }
 
