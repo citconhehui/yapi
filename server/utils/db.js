@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const yapi = require('../yapi.js');
 const autoIncrement = require('./mongoose-auto-increment');
+const fs = require("fs");
 
 function model(model, schema) {
   if (schema instanceof mongoose.Schema === false) {
@@ -34,6 +35,11 @@ function connect(callback) {
     options.reconnectInterval = config.db.reconnectInterval;
   }
 
+  if(config.db.cert) {
+    const certFileBuf = [fs.readFileSync(config.db.cert)];
+    options.sslValidate = true;
+    options.sslCA = certFileBuf;
+  }
 
   options = Object.assign({}, options, config.db.options)
 
