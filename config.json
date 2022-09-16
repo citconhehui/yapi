@@ -1,0 +1,25 @@
+{
+   "port": "3000",
+   "adminAccount": "yapi@citcon.cn",
+   "passWord": "123456",
+   "timeout": 120000,
+   "db": {
+      "servername": "192.168.50.8",
+      "DATABASE": "yapi",
+      "port": 27000,
+      "user": "",
+      "pass": "",
+      "authSource": "",
+      "cert": ""
+   },
+   "mail": {
+      "enable": false,
+      "host": "smtp.163.com",
+      "port": 465,
+      "from": "***@163.com",
+      "auth": {
+         "user": "***@163.com",
+         "pass": "*****"
+      }
+   }
+}
